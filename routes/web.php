@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,7 +9,9 @@ use App\Livewire\Counter;
 
 //add couter route
 Route::get('/counter', Counter::class);
-
+// Define a route for '/posts' that points to the 'index' method of 'PostController'
+Route::get('/posts',
+    [PostController::class, 'index'])->name('post.index');
 
 Route::get('/', function () {
     return view('welcome');

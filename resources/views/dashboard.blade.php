@@ -11,7 +11,7 @@
                 <livewire:counter />
             </div>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-10 text-2xl">
-                <livewire:counter />
+                <livewire:Post.create/>
             </div>
         </div>
     </div>
