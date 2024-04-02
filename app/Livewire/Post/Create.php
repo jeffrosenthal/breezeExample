@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class Create extends Component
 {
 
-    public $title = 'Post title...';
+    public $title = 'post title...';
     public $content;
     public function save()
     {
@@ -20,14 +20,14 @@ class Create extends Component
             'content' => 'required|string' // Validation rules for content
         ]);
         $post = Post::create($validatedData);
-//        $post = Post::create([
+//        $post = post::create([
 //            'title' => $this->title,
 //            'content' => 'Default content...', // Add a default content value here
 //        ]);
 
 
         return redirect()->to('/posts')
-            ->with('status', 'Post created!');
+            ->with('status', 'post created!');
     }
     public function render()
     {
